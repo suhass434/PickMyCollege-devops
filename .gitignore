@@ -1,0 +1,13 @@
+tabula-java.jar
+env
+junk
+.env
+node_modules/
+bugs.txt
+allPfds
+__pycache__/
+backups
+run_extractor.sh
+optmisations/
+ignored_combinations.txt
+preprocess_weighted_averages copy.py

@@ -1,0 +1,160 @@
+// src/config/branches.js
+
+const branches = [
+  {
+    section: "IT & Computer Science",
+    branches: [
+      "CS: Computer Science",
+      "IE: Information Science",
+      "AI: Artificial Intelligence",
+      "AD: Artificial Intelligence and Data Science",
+      "BD: Computer Science - Big Data",
+      "BF: B.Tech in Data Science",
+      "BG: B.Tech in Artificial Intelligence and Data Science",
+      "BH: B.Tech in Artificial Intelligence",
+      "BQ: B.Tech in Computer Graphics",
+      "BU: B.Tech in Computational Intelligence",
+      "BV: B.Tech in Cognitive Science",
+      "BW: B.Tech in Computer Science",
+      "BX: B.Tech in Cybersecurity",
+      "BY: B.Tech in Digital Operations",
+      "BZ: B.Tech in Data Science",
+      "CA: Computer Science (AI and Machine Learning)",
+      "CB: Computer Science and Business Systems",
+      "CC: Computer and Communication Engineering",
+      "CD: Computer Science and Design",
+      "CF: Computer Science (Artificial Intelligence)",
+      "CG: Computer Science and Technology",
+      "CI: Computer and Information",
+      "CO: Computer Engineering",
+      "CY: Computer Science - Cyber Security",
+      "DC: B.Tech in Data Science",
+      "DL: B.Tech in Computer Science",
+      "DS: Computer Science Engineering - Data Science",
+      "IB: CS-IoT Blockchain",
+      "IC: CS - IoT- Cyber Security",
+      "IO: Computer Science - Internet of Things",
+      "IY: Computer Science and Information Technology - Cyber Security",
+      "LA: Bachelor of Planning",
+      "LD: B.Tech in Data Science",
+      "LE: B.Tech in Artificial Intelligence and Machine Learning",
+      "LF: B.Tech in Cloud Computing",
+      "LG: B.Tech in Computer Science",
+      "LK: B.Tech in Internet of Things",
+      "MC: Mathematics and Computing",
+      "OP: Computer Science Engineering - DevOps",
+      "RM: Computer Science - Robotics Engineering (AI and ML)",
+      "SS: Computer Science and Systems Engineering",
+      "YA: B.Tech in Computer Science and Engineering (Robotics)",
+      "YB: B.Tech in Computer Science and Engineering (Data Analytics)",
+      "YD: B.Tech in Computer Science and Artificial Intelligence",
+      "ZC: B.Tech in Computer Science and Communication",
+      "ZG: B.Tech in Computer Science and Artificial Intelligence",
+      "ZH: B.Tech in Computer Science and Artificial Intelligence",
+      "ZM: B.Tech in Computer Science and Design",
+      "ZO: B.Tech in Computer Science and Business Systems",
+      "ZQ: B.Tech in Information Technology and Data Analytics",
+      "ZR: B.Tech in Computer Science and Engineering (AI)",
+      "ZW: B.Tech in Computer Science and Engineering (AI & ML)"
+    ]
+  },
+  {
+    section: "Circuit Branches",
+    branches: [
+      "EC: Electronics and Communication Engineering",
+      "EI: Electronics and Instrumentation Engineering",
+      "ET: Electronics and Telecommunication Engineering",
+      "BB: B.Tech in Electronics and Communication",
+      "BE: Bio-Electronics Engineering",
+      "CL: B.Tech in Electronics and Optics",
+      "CM: B.Tech in Electric Vehicles",
+      "ES: Electronics and Computer",
+      "EV: Electronics and Communication Engineering (VLSI Design)",
+      "EZ: B.Tech in Electronics and Computer Engineering",
+      "EL: Electronics & Instrumentation Technology",
+      "II: Electronics and Communication Engineering - Industrial Integrated",
+      "DV: B.Tech in VLSI Design",
+      "MD: Medical Electronics",
+      "MT: Mechatronics Engineering",
+      "YG: B.Tech in Electronics and Communication (VLSI and Embedded Systems)",
+      "YC: B.Tech in Embedded Systems and VLSI"
+    ]
+  },
+  {
+    section: "Core/Mechanical",
+    branches: [
+      "AE: Aeronautical Engineering",
+      "AM: B.Tech in Applied Mechanics",
+      "AT: Automotive Engineering",
+      "AU: Automobile Engineering",
+      "BP: B.Tech in Civil Engineering",
+      "DB: B.Tech in Mechanical Engineering",
+      "ME: Mechanical Engineering",
+      "MK: Mechanical Engineering (Kannada)",
+      "MM: Mechanical Engineering - Smart Manufacturing",
+      "MR: Marine Engineering",
+      "YI: B.Tech in Mechanical Engineering"
+    ]
+  },
+  {
+    section: "Civil/Architecture/Planning",
+    branches: [
+      "AR: Architecture",
+      "CT: Construction Technology Management",
+      "CV: Civil Environmental Engineering",
+      "CK: Civil Engineering (Kannada)",
+      "YE: B.Tech in Civil (Construction and Sustainability)",
+      "ZL: B.Tech in Civil Engineering with Computer Applications",
+      "UP: Urban Planning",
+      "UR: Bachelor of Planning"
+    ]
+  },
+  {
+    section: "Chemical/Bio/Other Engineering",
+    branches: [
+      "BM: Biomedical Engineering",
+      "BO: B.Tech in Biotechnology",
+      "BR: Biomedical and Robotic Engineering",
+      "CH: Chemical Engineering",
+      "DD: B.Tech in Material Science",
+      "DE: B.Tech in Petroleum Engineering",
+      "DI: B.Tech in Renewable Energy",
+      "EN: Environmental Engineering",
+      "BK: B.Tech in Environmental Engineering",
+      "PT: Polymer Technology",
+      "ZN: B.Tech in Pharmaceutical Engineering"
+    ]
+  },
+  {
+    section: "Others",
+    branches: [
+      "BL: B.Tech in Applied Sciences",
+      "BS: B.Sc (Honours)",
+      "CN: B.Tech in International Business",
+      "CQ: B.Tech in Industrial Operations",
+      "CR: Ceramic Engineering",
+      "EB: Engineering and Applied Technology",
+      "EG: Energy Engineering",
+      "IM: Industrial Engineering and Management",
+      "IP: Industrial Production",
+      "IS: Information Science and Technology",
+      "IZ: B.Tech in Information Science",
+      "LH: B.Tech in Information Science",
+      "LJ: B.Tech in Biological Sciences",
+      "PL: Petroleum Engineering",
+      "RA: Robotics and Automation",
+      "RB: Robotics",
+      "RI: Robotics and Artificial Intelligence",
+      "RO: Automation and Robotics",
+      "SA: Smart Agritech",
+      "SE: Aerospace Engineering",
+      "ST: Silk Technology",
+      "TC: Telecommunication Engineering",
+      "TI: Industrial Internet of Things",
+      "TX: Textile Engineering",
+      "ZV: B.Tech in Information Technology and Augmented Reality"
+    ]
+  }
+];
+
+export default branches;

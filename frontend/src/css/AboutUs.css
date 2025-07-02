@@ -1,0 +1,204 @@
+.aboutus-container {
+  max-width: 900px;
+  margin: 2px auto;
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.aboutus-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #0e3450;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.aboutus-container h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #183b56;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.team-heading {
+  margin-top: 48px;
+  margin-bottom: 2.5rem !important;
+  font-size: 1.35rem;
+  color: #1976d2;
+  text-align: center !important;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.team-member {
+  text-align: center;
+  width: 180px;
+  margin-bottom: 24px;
+}
+
+.team-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 2px solid #e0e0e0;
+}
+
+.team-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+}
+
+.team-linkedin {
+  display: inline-flex;
+  align-items: center;
+  color: #0A66C2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.team-linkedin:hover {
+  color: #004182;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.aboutus-container p,
+.aboutus-container ul {
+  font-size: 1.14rem;
+  line-height: 2.1;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.aboutus-container ul {
+  padding-left: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.aboutus-container li {
+  margin-bottom: 0.7rem;
+}
+
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* Heading style for "Got any queries or doubts ?" */
+.contact-catchy-heading {
+  font-size: 1.5rem;            /* Match h2 size */
+  font-weight: 700;             /* Bold */
+  color: #183b56;               /* Same as your h2 */
+  text-align: left;             /* Left align like "Our Mission" */
+  margin-bottom: 0.6rem;        /* Space below heading */
+  letter-spacing: 0.5px;
+}
+
+/* Email line style */
+.contact-email-line {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+  font-weight: 400;
+  word-break: break-all;
+  text-align: left;             /* Align with heading for consistency */
+}
+
+.contact-email-link {
+  margin-left: 0.4em;
+  color: #0072b1;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.contact-email-link:hover {
+  color: #005580;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .aboutus-container {
+    padding: 2rem 1rem;
+    margin: 2px;
+  }
+
+  .aboutus-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .aboutus-container h2 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutus-container p,
+  .aboutus-container ul {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .team-member {
+    width: 90vw;
+    max-width: 300px;
+  }
+
+  .team-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contact-section {
+    padding: 0 0rem;
+  }
+
+  .contact-catchy-heading {
+    font-size: 1.15rem; /* Match h2 size in mobile */
+  }
+
+  .contact-email-line {
+    font-size: 0.93rem;
+  }
+}

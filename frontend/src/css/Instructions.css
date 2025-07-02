@@ -1,0 +1,145 @@
+.instructions-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(14, 52, 80, 0.06);
+}
+
+.instructions-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #0e3450;
+  text-align: center;
+}
+
+.instructions-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructions-container section {
+  margin-bottom: 2.5rem;
+  padding: 1.2rem 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(14, 52, 80, 0.04);
+}
+
+.instructions-container h2 {
+  font-size: 1.8rem;
+  color: #0e3450;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+.instructions-container ol {
+  font-size: 1.1rem;
+  padding-left: 2rem;
+  margin-top: 0;
+}
+
+.instructions-container section ol {
+  padding-left: 2.2rem;
+}
+
+.instructions-container li {
+  margin-bottom: 1rem;
+}
+
+.instructions-container ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.3rem;
+}
+
+.instructions-container strong {
+  color: #0e3450;
+}
+
+.instructions-container .category-mapping {
+  margin-top: 2.5rem;
+}
+
+.instructions-container .category-mapping ol {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  column-gap: 2rem;
+  font-size: 1.05rem;
+  padding-left: 2rem;
+}
+
+.instructions-container .category-mapping li {
+  margin-bottom: 0.5rem;
+}
+
+.instructions-container .category-mapping strong {
+  color: #2e5a7e;
+}
+
+.instructions-container .category-mapping p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .instructions-container {
+    padding: 2rem 0.5rem;
+    margin: 2px;
+  }
+
+  .instructions-container h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .instructions-container h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .instructions-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .instructions-container section {
+    padding: 0.8rem 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .instructions-container ol,
+  .instructions-container section ol {
+    font-size: 0.98rem;
+    padding-left: 1rem;
+  }
+
+  .instructions-container li,
+  .instructions-container .category-mapping li {
+    margin-bottom: 0.7rem;
+  }
+
+  .instructions-container .category-mapping ol {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    column-gap: 0;
+    font-size: 0.98rem;
+    padding-left: 1rem;
+  }
+
+  .instructions-container .category-mapping p {
+    font-size: 0.92rem;
+    margin-top: 0.7rem;
+  }
+}

@@ -1,0 +1,202 @@
+/* Base navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e3450;
+  padding: 10px 20px;
+  position: fixed; /* Changed from relative to fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1001;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  cursor: pointer;
+}
+
+.navbar-logo {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #abe6f9;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to X when open */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* FIXED: Only add padding when navbar is active - NOT on landing page */
+.navbar-active {
+  padding-top: 60px; /* Only applies when navbar is shown */
+}
+
+/* Hide navbar when printing */
+@media print {
+  /* Keep navbar visible but style it for print */
+  .navbar {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 10px 0 !important;
+    position: static !important;
+  }
+  
+  /* Hide navigation links and hamburger */
+  .navbar-right,
+  .hamburger {
+    display: none !important;
+  }
+  
+  /* Position navbar-left to top-left */
+  .navbar-left {
+    display: block !important;
+    text-align: left !important;  /* Changed from center to left */
+    width: auto !important;       /* Changed from 100% to auto */
+    float: left !important;       /* Added float left */
+  }
+  
+  .logo-wrapper {
+    display: block !important;
+    text-align: left !important;  /* Changed from center to left */
+  }
+  
+  .navbar-logo {
+    display: block !important;
+    margin: 0 !important;         /* Changed from "0 auto" to "0" */
+    max-height: 60px;
+  }
+  
+  /* Your existing print styles */
+  .no-print {
+    display: none !important;
+  }
+  .only-print {
+    display: block !important;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-right {
+    position: fixed;
+    top: 60px; /* height of navbar approx */
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 200px;
+    background-color: #0e3450;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1001; /* Ensure it's below navbar but above other content */
+  }
+
+  .navbar-right.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Adjust body padding for mobile if navbar height changes */
+  .navbar-active {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  /* Fine-tune for very small screens */
+  .navbar-active {
+    padding-top: 55px; /* Slightly less padding if navbar is shorter */
+  }
+}
+
+/* Ensure mobile menu doesn't interfere with fixed navbar */
+@media (max-width: 768px) {
+  .navbar-right {
+    z-index: 1001; /* Lower than navbar but higher than page content */
+  }
+}
+
+/* Optional: Add smooth scrolling when navbar links are clicked */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile when menu is open */
+body.menu-open {
+  overflow-x: hidden;
+}

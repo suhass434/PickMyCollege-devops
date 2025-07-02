@@ -1,0 +1,267 @@
+/* Reset all margins and paddings globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global body/html fixes - ONLY for landing page */
+body.landing-page, html.landing-page {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.landing-container {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+
+.landing-left {
+  width: 65%;
+  display: flex;
+  align-items: center; /* Centers content vertically within left side */
+  background-color: white;
+  padding: 0 4rem;
+  height: 100%;
+}
+
+.landing-content {
+  max-width: 80%;
+}
+
+.landing-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #0e3450;
+  line-height: 1.2;
+}
+
+.landing-content h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0e3450;
+}
+
+.landing-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.get-started-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #0e3450;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.get-started-button:hover {
+  background-color: #166944;
+}
+
+.landing-right {
+  width: 35%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center; /* Centers content vertically within right side */
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.college-logo {
+  width: 375px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.logo-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.logo-subtext {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.desktop-break {
+  display: block;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .landing-left {
+    padding: 0 3rem;
+  }
+  
+  .landing-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .landing-content p {
+    font-size: 1rem;
+  }
+  
+  .college-logo {
+    width: 300px;
+  }
+  
+  .logo-heading {
+    font-size: 1.3rem;
+  }
+  
+  .logo-subtext {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+  
+  .landing-right {
+    order: 1;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background-color: #f8f9fa;
+  }
+  
+  .landing-left {
+    order: 2;
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+  
+  .landing-content {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 0;    /* Remove extra space below content */
+    padding-bottom: 0;
+  }
+  
+  .landing-content h1 {
+    font-size: 1.4rem;   /* Reduced headline size for mobile */
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  
+  .desktop-break {
+    display: none;
+  }
+  
+  .landing-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .get-started-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0;     /* Remove extra space below button */
+  }
+  
+  .logo-container {
+    padding: 1rem;
+  }
+  
+  .college-logo {
+    width: 250px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-heading {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .logo-subtext {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .landing-left {
+    padding: 1.5rem 1rem;
+  }
+  
+  .landing-right {
+    padding: 1.5rem 1rem;
+  }
+  
+  .landing-content h1 {
+    font-size: 1.1rem;   /* Even smaller headline for tiny screens */
+    line-height: 1.2;
+  }
+  
+  .landing-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .get-started-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .college-logo {
+    width: 200px;
+  }
+  
+  .logo-heading {
+    font-size: 1.2rem;
+  }
+  
+  .logo-subtext {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .landing-content h1 {
+    font-size: 0.95rem;
+    line-height: 1.15;
+  }
+  
+  .college-logo {
+    width: 180px;
+  }
+  
+  .get-started-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+}
