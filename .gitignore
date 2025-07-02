@@ -12,3 +12,4 @@ optmisations/
 ignored_combinations.txt
 preprocess_weighted_averages copy.py
 jenkins.war
+*.war
