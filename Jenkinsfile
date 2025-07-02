@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+    agent {
+        docker {
+            image 'node:18'
+            args '-p 3000:3000'  // if your app runs on 3000
+        }
+    }
 
   environment {
     DOCKER_COMPOSE_FILE   = "docker-compose.yml"
