@@ -9,6 +9,14 @@ pipeline {
   }
 
   stages {
+    stage('SonarQube Analysis') {
+        steps {
+            withSonarQubeEnv('SonarQubeServer') {
+            sh 'sonar-scanner -Dsonar.projectKey=PickMyCollege -Dsonar.sources=backend,frontend'
+            }
+        }
+    }
+
     stage('Build Backend Image') {
       steps {
         script {
