@@ -1,38 +1,45 @@
 pipeline {
-    agent any
+  agent any
 
-    environment {
-        DOCKER_COMPOSE_FILE   = "docker-compose.yml"
-        GIT_CREDENTIALS       = "github-pat"
-        DOCKERHUB_CREDENTIALS = "dockerhub-credentials"
-        DOCKERHUB_BACKEND     = "suhass434/pickmycollege-backend:latest"
-        DOCKERHUB_FRONTEND    = "suhass434/pickmycollege-frontend:latest"
+  environment {
+    DOCKERHUB_USERNAME    = "suhass434"
+    DOCKERHUB_BACKEND     = "${DOCKERHUB_USERNAME}/pickmycollege-backend:latest"
+    DOCKERHUB_FRONTEND    = "${DOCKERHUB_USERNAME}/pickmycollege-frontend:latest"
+    DOCKERHUB_CREDENTIALS = "dockerhub-credentials"
+  }
+
+  stages {
+    stage('Build Backend Image') {
+      steps {
+        script {
+          sh "docker build -t ${DOCKERHUB_BACKEND} ./backend"
+        }
+      }
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git credentialsId: "${GIT_CREDENTIALS}",
-                    url: 'https://github.com/suhass434/PickMyCollege-devops',
-                    branch: 'main'
-            }
+    stage('Build Frontend Image') {
+      steps {
+        script {
+          sh "docker build -t ${DOCKERHUB_FRONTEND} ./frontend"
         }
-
-        stage('Build App') {
-            steps {
-                script {
-                    docker.image('node:18').inside {
-                        dir('backend') {
-                            sh 'npm install'
-                            sh 'npm run build'
-                        }
-                        dir('frontend') {
-                            sh 'npm install'
-                            sh 'npm run build'
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+
+    stage('Push Images to Docker Hub') {
+      steps {
+        withCredentials([usernamePassword(
+          credentialsId: env.DOCKERHUB_CREDENTIALS,
+          usernameVariable: 'DH_USER',
+          passwordVariable: 'DH_PASS'
+        )]) {
+          sh """
+            echo "$DH_PASS" | docker login -u "$DH_USER" --password-stdin
+            docker push ${DOCKERHUB_BACKEND}
+            docker push ${DOCKERHUB_FRONTEND}
+            docker logout
+          """
+        }
+      }
+    }
+  }
 }
