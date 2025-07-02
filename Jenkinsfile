@@ -12,8 +12,10 @@ pipeline {
     stage('SonarQube Analysis') {
         steps {
             withSonarQubeEnv('SonarQubeServer') {
-            sh 'sonar-scanner -Dsonar.projectKey=PickMyCollege -Dsonar.sources=backend,frontend'
-            }
+                sh '''
+                    export PATH=$PATH:/home/suhas/sonar-scanner-5.0.1.3006-linux/bin
+                    sonar-scanner -Dsonar.projectKey=PickMyCollege -Dsonar.sources=backend,frontend
+                '''
         }
     }
 
