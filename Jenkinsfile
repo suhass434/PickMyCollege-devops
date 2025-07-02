@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_USERNAME    = "suhass434"
+    DOCKERHUB_USERNAME    = "your-dockerhub-username"
     DOCKERHUB_BACKEND     = "${DOCKERHUB_USERNAME}/pickmycollege-backend:latest"
     DOCKERHUB_FRONTEND    = "${DOCKERHUB_USERNAME}/pickmycollege-frontend:latest"
     DOCKERHUB_CREDENTIALS = "dockerhub-credentials"
@@ -41,5 +41,5 @@ pipeline {
         }
       }
     }
-  }what 
+  }
 }
