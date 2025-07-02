@@ -41,6 +41,18 @@ pipeline {
       }
     }
 
+    stage('Scan Backend Image') {
+    steps {
+        sh 'trivy image ${DOCKERHUB_BACKEND} || true'
+    }
+    }
+
+    stage('Scan Frontend Image') {
+    steps {
+        sh 'trivy image ${DOCKERHUB_FRONTEND} || true'
+    }
+    }
+
     stage('Push Images to Docker Hub') {
       steps {
         withCredentials([usernamePassword(
