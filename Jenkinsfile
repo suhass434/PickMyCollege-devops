@@ -76,6 +76,7 @@ pipeline {
           sh '''
             curl -X POST "https://api.render.com/deploy/srv-d1iurmur433s73fj4b1g?key=IujTOD7sUws"
           '''
+        }
       }
     }
   }
