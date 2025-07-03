@@ -24,7 +24,7 @@ pipeline {
             }
         }
     }
-
+    
     stage('Build Backend Image') {
       steps {
         script {
@@ -42,15 +42,15 @@ pipeline {
     }
 
     stage('Scan Backend Image') {
-    steps {
-        sh 'trivy image ${DOCKERHUB_BACKEND} || true'
-    }
-    }
+        steps {
+            sh 'trivy image ${DOCKERHUB_BACKEND} || true'
+        }
+        }
 
     stage('Scan Frontend Image') {
-    steps {
-        sh 'trivy image ${DOCKERHUB_FRONTEND} || true'
-    }
+        steps {
+            sh 'trivy image ${DOCKERHUB_FRONTEND} || true'
+        }
     }
 
     stage('Push Images to Docker Hub') {
@@ -67,6 +67,15 @@ pipeline {
             docker logout
           """
         }
+      }
+    }
+    stage('Deploy to Render') {
+      steps {
+        script {
+          // Deploy backend
+          sh '''
+            curl -X POST "https://api.render.com/deploy/srv-d1iurmur433s73fj4b1g?key=IujTOD7sUws"
+          '''
       }
     }
   }
